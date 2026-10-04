@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 
 \language "italiano"
 
@@ -176,6 +176,7 @@ The shep -- herds came from out the north, Their coats were brown and old; They 
 Wise men came from out of the east; Star that led them: glo -- ri -- fy, glo -- ri -- fy!--
 The an -- gels sang through all the night Un -- til the ris -- ing sun, But lit -- -tle Je -- sus fell a -- sleeep Be -- fore the song was done.}
 
+\book {
 \score {
   
   \new ChoirStaff <<
@@ -217,5 +218,48 @@ The an -- gels sang through all the night Un -- til the ris -- ing sun, But lit 
       \new Lyrics \lyricsto "bass" \basswords
     >>
   >>
-  %\midi {}
+}
+\score {
+  
+  \new ChoirStaff <<
+    \new Staff <<
+      \new Voice = "sopranoun" <<
+        \global
+        \sopranonotesun
+      >>
+       \new Lyrics \lyricsto "sopranoun" \sopranowordsun
+    >>
+    \new Staff <<
+      \new Voice = "sopranodeux" <<
+        \global
+        \sopranonotesdeux
+      >>
+     
+      \new Lyrics \lyricsto "sopranodeux" \sopranowordsdeux
+      
+    >>
+    \new Staff <<
+      \new Voice = "alto" <<
+        \global
+        \altonotes
+      >>
+      \new Lyrics \lyricsto "alto" \altowords
+    >>
+    \new Staff <<
+      \new Voice = "tenor" <<
+        \global
+        \tenornotes
+      >>
+      \new Lyrics \lyricsto "tenor" \tenorwords
+    >>
+    \new Staff <<
+      \new Voice = "bass" <<
+        \global
+        \bassnotes
+      >>
+      \new Lyrics \lyricsto "bass" \basswords
+    >>
+  >>
+  \midi {}
+}
 }
