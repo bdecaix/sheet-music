@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 
 
 \language "italiano"
@@ -217,8 +217,10 @@ basswords = \lyricmode {
   Pain de Vie, et so -- yez trans -- for -- més en Lui_!
 }
 
+\book {
+  \bookOutputName "Allez_a_Jesus_Eucharistie"
 \score {
-%  \bookOutputName "Allez_a_Jesus_Eucharistie"
+
   
   \new ChoirStaff <<
     \new Staff <<
@@ -375,4 +377,5 @@ basswords = \lyricmode {
     >>
   >>
   \midi {}
+}
 }
