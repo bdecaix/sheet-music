@@ -174,9 +174,9 @@ basswords = \lyricmode {
     >>
 
 }
-
-\score {
-%  \bookOutputName "Vous etes dans mon ame"
+\book {
+  \bookOutputName "Vous etes dans mon ame"
+  \score {
   
   \new ChoirStaff <<
     \new Staff <<
@@ -202,6 +202,7 @@ basswords = \lyricmode {
     >>
   >>
   \midi {}
+}
 }
 
 
