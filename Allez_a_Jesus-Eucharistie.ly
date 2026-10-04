@@ -218,7 +218,7 @@ basswords = \lyricmode {
 }
 
 \score {
-  \bookOutputName "Allez_a_Jesus_Eucharistie"
+%  \bookOutputName "Allez_a_Jesus_Eucharistie"
   
   \new ChoirStaff <<
     \new Staff <<
