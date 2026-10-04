@@ -219,38 +219,38 @@ basswords = \lyricmode {
 
 \book {
   \bookOutputName "Allez_a_Jesus_Eucharistie"
-\score {
+  \score {
 
-  
-  \new ChoirStaff <<
-    \new Staff <<
-      \new Voice = "soprano" <<
-        \global
-        \sopranonotes
+    \new ChoirStaff <<
+      \new Staff <<
+        \new Voice = "soprano" <<
+          \global
+          \sopranonotes
+        >>
       >>
-    >>
 
-    \new Staff <<
-      \new Voice = "alto" <<
-        \global
-        \altonotes
+      \new Staff <<
+        \new Voice = "alto" <<
+          \global
+          \altonotes
+        >>
+      >>
+      \new Staff <<
+        \new Voice = "tenor" <<
+          \global
+          \tenornotes
+        >>
+      >>
+      \new Staff <<
+        \new Voice = "bass" <<
+          \global
+          \bassnotes
+        >>
       >>
     >>
-    \new Staff <<
-      \new Voice = "tenor" <<
-        \global
-        \tenornotes
-      >>
-    >>
-    \new Staff <<
-      \new Voice = "bass" <<
-        \global
-        \bassnotes
-      >>
-    >>
-  >>
-  \midi {}
-}
+    \midi {}
+  }
+  }
 
 \score {
   
@@ -377,5 +377,4 @@ basswords = \lyricmode {
     >>
   >>
   \midi {}
-}
 }
