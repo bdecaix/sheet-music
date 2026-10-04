@@ -111,7 +111,7 @@ basswords = \lyricmode {
 }
 
 \score {
-  \bookOutputName "IN DULCI JUBILO"
+%  \bookOutputName "IN DULCI JUBILO"
   
   \new ChoirStaff <<
     \new Staff <<
