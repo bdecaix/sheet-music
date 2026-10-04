@@ -10,20 +10,20 @@
   tagline = ##f
 }
 
-\paper {
+%\paper {
   %annotate-spacing = ##t %Affichage des distances
-  system-system-spacing = #'((basic-distance . 15) (padding . 10))
+ % system-system-spacing = #'((basic-distance . 15) (padding . 10))
   %system-system-spacing.basic-distance = #0
-  top-margin = 3
-  line-width = 200
+  %top-margin = 3
+  %line-width = 200
   
-  score-system-spacing =
-    #'((padding . 1)
-       (basic-distance . 100)
-       (minimum-distance . 10)
-       (stretchability . 12))
+  %score-system-spacing =
+  %  #'((padding . 1)
+   %    (basic-distance . 100)
+   %    (minimum-distance . 10)
+   %    (stretchability . 12))
   
-}
+%}
 
 
 \layout {
@@ -133,34 +133,6 @@ basswords = \lyricmode {
 
 }
 
-\score {
-  \bookOutputName "Vous etes dans mon ame"
-  
-  \new ChoirStaff <<
-    \new Staff <<
-      \new Voice = "soprano" <<
-        \global
-        \sopranonotes
-      >>
-      \new Voice = "alto" <<
-        \global
-        \altonotes
-      >>
-    >>
-
-    \new Staff <<
-      \new Voice = "tenor" <<
-        \global
-        \tenornotes
-      >>
-      \new Voice = "bass" <<
-        \global
-        \bassnotes
-      >>
-    >>
-  >>
-  \midi {}
-}
 
 \score {
   
@@ -202,6 +174,37 @@ basswords = \lyricmode {
     >>
 
 }
+
+\score {
+%  \bookOutputName "Vous etes dans mon ame"
+  
+  \new ChoirStaff <<
+    \new Staff <<
+      \new Voice = "soprano" <<
+        \global
+        \sopranonotes
+      >>
+      \new Voice = "alto" <<
+        \global
+        \altonotes
+      >>
+    >>
+
+    \new Staff <<
+      \new Voice = "tenor" <<
+        \global
+        \tenornotes
+      >>
+      \new Voice = "bass" <<
+        \global
+        \bassnotes
+      >>
+    >>
+  >>
+  \midi {}
+}
+
+
 \score {
   \new ChoirStaff <<
     \new Staff <<
