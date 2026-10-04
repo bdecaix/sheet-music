@@ -61,7 +61,7 @@ choirwords = \lyricmode {
 
 
 \score {
-  \bookOutputName "CANON_SWINGLE_SINGERS"
+%  \bookOutputName "CANON_SWINGLE_SINGERS"
   <<
 
     \new Voice = "One" \relative do' {
@@ -142,7 +142,7 @@ la,8. la16 la si do re mi fad sol la si8-. \breathe mi, mi red16 dod red4 mi r8 
 }
 
 \score {
-  \bookOutputName "CANON_SWINGLE_SINGERS_solo"
+%  \bookOutputName "CANON_SWINGLE_SINGERS_solo"
   <<
 
     \new Voice = "One" \relative do' {
