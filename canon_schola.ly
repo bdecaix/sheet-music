@@ -12,13 +12,27 @@
 }
 
 global = {
-  \time 3/4
+  \time 4/4
 }
 
 melodie =   \relative do' {
-    do8 do16 do8 do re re16 re8 sol sol4.~ sol8
-    sol8 sol16 sol8 sol fa fa16 fa8 fa mi mi16 mi8 mi
-    re re16 re8 re do do16 do8 do re re16 do8 si do4.~ do8
+  % Mesure 1 : 7 + 7 + 2 = 16 doubles-croches (4 temps)
+  do8 do16 do8 do re re16 re8 sol sol~ |
+  
+  % Mesure 2 : 16 doubles-croches (4 temps)
+  sol1 |
+  
+  % Mesure 3 : 7 + 7 + 2 = 16 doubles-croches (4 temps)
+  sol8 sol16 sol8 sol fa fa16 fa8 fa mi |
+  
+  % Mesure 4 : 5 + 7 + 4 = 16 doubles-croches (4 temps)
+  mi16 mi8 mi re re16 re8 re do do16 do16~ |
+  
+  % Mesure 5 : 3 + 7 + 6 = 16 doubles-croches (4 temps)
+  do8 do16 re8 re16 do8 si do4.~ |
+  
+  % Mesure 6 : 16 doubles-croches (4 temps)
+  do1 |
   }
 
 premiereVoix = {
@@ -30,7 +44,7 @@ premiereVoix = {
 
 deuxiemeVoix = {
   \voiceTwo
-  R2. r8 r2 % Décalage d'une mesure (changez en R1*2 pour 2 mesures)
+  R1 R1 % Décalage d'une mesure (changez en R1*2 pour 2 mesures)
   \melodie
   \melodie
   \melodie
@@ -38,7 +52,7 @@ deuxiemeVoix = {
 
 troisiemeVoix = {
   \voiceThree
-  R2. R2. R2. r2 % Décalage d'une mesure (changez en R1*2 pour 2 mesures)
+  R1 R1 R1 R1 % Décalage d'une mesure (changez en R1*2 pour 2 mesures)
   \melodie
   \melodie
   \melodie
@@ -46,7 +60,7 @@ troisiemeVoix = {
 
 quatriemeVoix = {
   \voiceFour
-  R2. R2. R2. R2. R2. r4.  % Décalage d'une mesure (changez en R1*2 pour 2 mesures)
+  R2. R2. R2. R2. R2. r4  % Décalage d'une mesure (changez en R1*2 pour 2 mesures)
   \melodie
   \melodie
   \melodie
@@ -61,24 +75,24 @@ quatriemeVoix = {
         \premiereVoix
       >>
     >>
-    \new Staff <<
+   \new Staff <<
       \new Voice = "voix2" <<
         \global
         \deuxiemeVoix
       >>
     >>
-    \new Staff <<
+     \new Staff <<
       \new Voice = "voix3" <<
         \global
         \troisiemeVoix
       >>
     >>
-    \new Staff <<
+%{    \new Staff <<
       \new Voice = "voix4" <<
         \global
         \quatriemeVoix
       >>
-    >>
+    >>%}
   >>
 
   \layout {}
