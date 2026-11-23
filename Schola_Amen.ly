@@ -5,8 +5,8 @@
 \language italiano
 
 \header {
-  title = "Canon"
-  composer = "Schola Vaucresson"
+  title = "Amen"
+  composer = "H.C."
   %poet = ""
   tagline = ##f
 }
@@ -15,55 +15,40 @@ global = {
   \time 4/4
 }
 
-melodie =   \relative do' {
-  % Mesure 1 : 7 + 7 + 2 = 16 doubles-croches (4 temps)
-  do8 do16 do8 do re re16 re8 sol sol~ |
-  
-  % Mesure 2 : 16 doubles-croches (4 temps)
-  sol1 |
-  
-  % Mesure 3 : 7 + 7 + 2 = 16 doubles-croches (4 temps)
-  sol8 sol16 sol8 sol fa fa16 fa8 fa mi |
-  
-  % Mesure 4 : 5 + 7 + 4 = 16 doubles-croches (4 temps)
-  mi16 mi8 mi re re16 re8 re do do16 do16~ |
-  
-  % Mesure 5 : 3 + 7 + 6 = 16 doubles-croches (4 temps)
-  do8 do16 re8 re16 do8 si do4.~ |
-  
-  % Mesure 6 : 16 doubles-croches (4 temps)
-  do1 |
+soprane =   \relative do' {
+  sol'2 sol mi mi re4 (fa) mi mi mi1
+  }
+
+alto = \relative do' {
+  mi2 re do si la4 re do4 si do1
+  }
+
+tenor =   \relative do' {
+  do2 si la sol fa4 la sol4 sol sol1
+  }
+
+basse = \relative do' {
+  do2 sol fa4 mi la2 re4 re8 do la4 do mi1
   }
 
 premiereVoix = {
   \voiceOne
-  \melodie
-  \melodie
-  \melodie
+  \soprane
 }
 
 deuxiemeVoix = {
   \voiceTwo
-  R1 R1 % Décalage d'une mesure (changez en R1*2 pour 2 mesures)
-  \melodie
-  \melodie
-  \melodie
+  \alto
 }
 
 troisiemeVoix = {
   \voiceThree
-  R1 R1 R1 R1 % Décalage d'une mesure (changez en R1*2 pour 2 mesures)
-  \melodie
-  \melodie
-  \melodie
+  \tenor
 }
 
 quatriemeVoix = {
   \voiceFour
-  R2. R2. R2. R2. R2. r4  % Décalage d'une mesure (changez en R1*2 pour 2 mesures)
-  \melodie
-  \melodie
-  \melodie
+  \basse
 }
 
 
@@ -87,12 +72,12 @@ quatriemeVoix = {
         \troisiemeVoix
       >>
     >>
-%{    \new Staff <<
+   \new Staff <<
       \new Voice = "voix4" <<
         \global
         \quatriemeVoix
       >>
-    >>%}
+    >>
   >>
 
   \layout {}
